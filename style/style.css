@@ -1,0 +1,194 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.grid * div {
+  height: 9.5px;
+  width: 9.5px;
+  padding: 0;
+  transition: opacity 1s;
+}
+
+.grid * td {
+  padding: 0;
+  border: solid 0.5px #ebf4ff;
+}
+
+.grid {
+  position: fixed;
+  border-collapse: collapse;
+}
+
+.grid:hover {
+  cursor: crosshair;
+}
+
+.btn {
+  font-size: 0.8rem;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.datapoint {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: solid 1.75px black;
+  background-color: rgb(240, 55, 16);
+}
+
+.centroid {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid 1.75px black;
+  background-color: white;
+  transform: rotateZ(45deg);
+  z-index: 1;
+  transition: top 3s, left 3s;
+}
+
+.mini {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #a3a3a3;
+}
+
+.card {
+  width: 300px;
+  padding: 0 15px 15px 15px;
+  background-color: rgba(245, 255, 254, 0.95);
+}
+
+.panel {
+  position: absolute;
+  z-index: 1;
+}
+
+.btn-container {
+  margin-top: 15px;
+}
+
+.pending {
+  opacity: 0.1 !important;
+}
+
+ol li {
+  margin-bottom: 25px;
+}
+
+ol li:last-child {
+  margin-bottom: 0;
+}
+
+ol, ul {
+  padding-left: 15px;
+}
+
+.done {
+  list-style: "✔️";
+}
+
+.fail {
+  list-style: "❌";
+}
+
+.panel p {
+  font-size: 0.9rem;
+}
+
+#brush-selection {
+  position: relative;
+}
+
+.brush-preview {
+  position: absolute;
+  top: 8px;
+  right: -100px;
+  transform: translate(50%, -50%);
+}
+
+a.badge:hover {
+  cursor: pointer;
+}
+
+a.badge.disabled:hover {
+  cursor: not-allowed;
+}
+
+.disabled {
+  opacity: 0.1;
+}
+
+div.brush-preview {
+  border: 1px solid black;
+  border-radius: 100%;
+}
+
+.drag-zone {
+  background: white;
+  background-image: radial-gradient(#b3b3b3 1px, transparent 0);
+  background-size: 5px 5px;
+  background-position: -19px -19px;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.drag-zone:hover {
+  cursor: grab;
+}
+
+.select-box {
+  position: absolute;
+  background-color: rgba(245, 255, 254, 0.5);
+  border: 1px solid #8caba8;
+}
+
+.drag-zone.dragging:hover {
+  cursor: grabbing;
+}
+
+.distance-circle {
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  transition-timing-function: linear;
+}
+
+.arrow:after {
+  content: "";
+  display: inline-block !important;
+  width: 0;
+  height: 0;
+  border-left: 4px solid #007bff;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  vertical-align: middle;
+}
+
+.arrow:before {
+  height: 2px;
+  background: #007bff;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  transition: width 3s;
+}
+
+.arrow {
+  position: absolute;
+  transform-origin: left center;
+  transition: top 3s, left 3s;
+  white-space: nowrap;
+}
