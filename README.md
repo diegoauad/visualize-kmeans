@@ -13,5 +13,5 @@ A visualization of <a href="https://en.wikipedia.org/wiki/K-means_clustering" ta
 <h4 align="center"><a href="https://4uad.github.io/visualize-kmeans" target="__blank">▶️ Live demo</a></h4>
  
 <p align="center">
-<img src="https://i.imgur.com/UUZu4Oy.gif" alt="Demo">
+<img src="https://i.imgur.com/6VQrLoC.gif" alt="Demo">
 </p>
